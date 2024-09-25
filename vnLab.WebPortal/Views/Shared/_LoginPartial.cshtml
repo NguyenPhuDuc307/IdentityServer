@@ -1,0 +1,31 @@
+<style>
+    .avatar {
+        width: 32px;
+        height: 32px;
+        line-height: 28px;
+        text-align: center;
+        font-size: 24px;
+        color: white;
+        background-color: #4FB084;
+        border-radius: 50%;
+    }
+</style>
+
+<ul class="text-end navbar-nav">
+    @if (User != null && User.Identity != null && User.Identity.IsAuthenticated)
+    {
+        <li class="nav-item">
+            <a asp-controller="Account" asp-action="MyProfile" class="nav-link text-dark">
+                <div id="avatar-container" class="me-1"></div>
+                @User.Identity.Name
+            </a>
+        </li>
+        <input id="username" value="@User.Identity.Name" hidden />
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="btn btn-light text-dark me-2" asp-controller="Account" asp-action="SignIn">Login</a>
+        </li>
+    }
+</ul>

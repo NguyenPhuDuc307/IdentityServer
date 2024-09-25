@@ -1,0 +1,63 @@
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+
+<div class="col-12 col-lg-6 mb-2 mb-lg-0 me-lg-auto" role="search">
+    <div class="position-relative">
+        <input type="text" id="search" autocomplete="off" class="form-control" placeholder="Type to search...">
+        <ul id="autocomplete-list" class="list-group position-absolute w-100"></ul>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#search").on("input", function () {
+            var query = $(this).val().toLowerCase();
+            $("#autocomplete-list").empty();
+            if (query.length > 0) {
+                $.ajax({
+                    url: "/search", // Đường dẫn tới action Search trong controller SearchViewComponent
+                    method: "GET",
+                    data: { keyword: query },
+                    success: function (response) {
+                        var data = response.items;
+                        $("#autocomplete-list").empty(); // Xóa danh sách trước khi thêm kết quả mới
+                        if (data.length > 0) {
+                            data.forEach(function (user) {
+                                var suggestionItem = $('<li class="list-group-item d-flex align-items-center"></li>');
+                                var avatarElement;
+                                if (!user.avatar) {
+                                    var initial = user.firstName ? user.firstName.charAt(0).toUpperCase() : '';
+                                    avatarElement = '<span class="avatar avatar-xl rounded-circle m-2 text-uppercase d-flex justify-content-center align-items-center gradient-avatar" style="width: 40px; height: 40px; font-size: 24px;">' + initial + '</span>';
+                                } else {
+                                    var avatarUrl = user.avatar.includes("http") ? user.avatar : '@Configuration["BackendApiUrl"]/avatars/' + user.avatar;
+                                    avatarElement = '<img class="avatar avatar-xl rounded-circle m-2" src="' + avatarUrl + '" style="width: 40px; height: 40px;">';
+                                }
+                                suggestionItem.html(
+                                    avatarElement +
+                                    '<div><strong>' + user.firstName + ' ' + user.lastName + '</strong><br/><small>' + user.email + '</small></div>'
+                                );
+                                suggestionItem.on("click", function () {
+                                    $("#search").val(user.firstName + ' ' + user.lastName);
+                                    $("#autocomplete-list").empty();
+                                });
+                                $("#autocomplete-list").append(suggestionItem);
+                            });
+                        } else {
+                            $("#autocomplete-list").append('<li class="list-group-item">No results found</li>');
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.log("Error:", error);
+                    }
+                });
+            }
+        });
+
+        $(document).click(function (e) {
+            if (!$(e.target).closest("#search, #autocomplete-list").length) {
+                $("#autocomplete-list").empty();
+            }
+        });
+    });
+</script>

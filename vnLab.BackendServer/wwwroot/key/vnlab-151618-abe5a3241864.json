@@ -1,0 +1,13 @@
+{
+    "type": "service_account",
+    "project_id": "vnlab-151618",
+    "private_key_id": "abe5a32418642bee3a288cf932a62f51bebcdd00",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCXVWP3XrWeBvUw\n6Zhzn5VC8DKyHDS/7P1ZIyFN1iJsbM5w9BI3LtyaF+Q3icsjCj+kF3bX4+E5eITy\nmwbVx3yaD+7sBojq6OX4xkmfxCP4y2A9tWQNx3N37guye7JyHxeGbasfwSyrNDWG\nVyF6qP+c+nFSn39S6dp370Xp5mUkfnmFCYirPvBx0NNhCubUVuhEukxLpOVMYQLk\nYqfhpK+VBvsJBDQ1slg5ezlh0gW5jaCdUAI8j72y8FnQpa1oSxfbmj3AYHf0xa8a\nbHv3RZF8saFGAUMB9RUhfvAXDSL7A8/vYfH3F14UWVoCANpP+90E2vRdUGQGSTCh\ngLFZ6IqdAgMBAAECggEAA1f3pXeKO7ubn0EKBUP5YEk+VYEaCUOLNXT5P2cDy7F7\nvjMmU+HNLfppKHD69AM99Lov/gUi7Mok5ddXB1IpBp5jgQOD8uzCaAS5i7YhtVWJ\nAtQHKebGPlgcGg1xm+Pj+SxjI4h5HC9DH3y9WKBzRVyjNFgh0AsqsIuw18Inae74\nvcCJ5Z8PbcUn0wpBkJwQ5yx+p1GNnyMbOmY4noGyH4aa4xlkJnBx14X6YDzym/dI\nYy84a6MaHbEgfZ3K/PykaEqRrES5mfX9bBvz97wktfj7pxboRSuP6RdveUrYz4pl\nx5tckttBt1lc0TNyQoAEdt26zdpj6vYaEugivOvjAQKBgQDFDe92AhCqvMXw5YPx\nCgRg+LywT/MurjI6p5W4uYM/p7uBxd3BKT6PBQPc6TrAq6mRVR03YMvLZkOteSCl\nXGtwI4oqgqU1BbjPZYNzlf/Qb4e8tyLM9CmHcWGQlBBUBBxfzySl6bmoKGP6whnH\ng3OiYDB7M9BXIfCx4ToqIIimBQKBgQDEmjwUZolQKwnlRtPvoE9urgq5Arq9kVMj\nMqTMYEvBvn321ubviu7JNemWxoAi8q71YyQC7YeGqt0VOh8XHOlPJ/qDLnTrebrz\nIvzR+2sn7Qp9S/D2Cknysw8hJqS++/6KpPzpXJm4Si01x6KSdHBeMyD8EImjSGiT\nyckQ8BIduQKBgQCqQtouyqYAAE+/T3Brak5SQ1k1tj7WjKjVyUsyawgejh0TihWK\n+soU5S5rSBH9u9Utv68Y1EgCHQBI+Snd9zbVk7+j73IzmBgRCxNDYc3BGTzdMBef\noy/m2W6Fb4mULmEd32s49/P0ecG5PtDrdIcLO7VoHmLbhnXkHEkXcTjgyQKBgGQI\nnj07Fu8Flxlj+n5YsVH9mFMewmmmQgkMwbGD5cgE5w7rtcF4jZsvpVUkVxpxJPiS\no0YiGe05jxg35I3cFhJCo0KQJsmRvL/ts3ocVR+Rit7J/ycRgSLOXQpfIUBT8+YT\noOQUS9rrUymkFGI0gOBNX6EhwQal1yArcfT+UhlxAoGAe20gMyC35gMwfHKOjoTh\nbLmJ+04XFbmvWtAo++bYgDMhw1frNZRH0m1O+5qnOtX+0l1T+nKwFoTH+34ypzTR\nFKq92WnfJUNNoHkQVGghRQO2P00eRFkt/FRk9fCXgAvZTXV05w2IA8GYU/rDVezf\nQHiKlCOi1OGwuBY6HRLdTJY=\n-----END PRIVATE KEY-----\n",
+    "client_email": "vnlab-901@vnlab-151618.iam.gserviceaccount.com",
+    "client_id": "114393767240124483490",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/vnlab-901%40vnlab-151618.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+}
